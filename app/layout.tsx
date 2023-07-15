@@ -1,15 +1,15 @@
+import { Bowlby_One_SC, Architects_Daughter, Londrina_Outline } from 'next/font/google'
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { sfPro, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "Wohntraum Andalusia SI",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+    "LandingPage für Wohmtraum Andalusia SI",
   twitter: {
     card: "summary_large_image",
     title: "Precedent - Building blocks for your Next.js project",
@@ -21,6 +21,18 @@ export const metadata = {
   themeColor: "#FFF",
 };
 
+const lontoutline = Londrina_Outline({
+  variable: '--font-lontoutline',
+  weight: '400',
+  preload: false
+})
+ 
+const archidaught = Architects_Daughter({
+  variable: '--font-archidaught-mono',
+  weight: '400',
+  preload: false
+})
+
 export default async function RootLayout({
   children,
 }: {
@@ -28,8 +40,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
+      <body className={`${lontoutline.variable} ${archidaught.variable}`}>
+      
+        <div className="fixed h-screen w-full bg-gradient-to-br from-stone-700 via-white to-cyan-100" />
         <Suspense fallback="...">
           {/* @ts-expect-error Server Component */}
           <Nav />
@@ -43,3 +56,6 @@ export default async function RootLayout({
     </html>
   );
 }
+
+ 
+

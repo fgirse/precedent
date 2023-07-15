@@ -9,9 +9,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["var(--font-sf)", "system-ui", "sans-serif"],
-        default: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-lontoutline)", "system-ui", "sans-serif"],
+        default: ["var(--font-archidauhght)", "system-ui", "sans-serif"],
       },
+
       animation: {
         // Fade up and down
         "fade-up": "fade-up 0.5s",
